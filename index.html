@@ -1,56 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megasteel Fitness | The Elite Power House</title>
+    <title>Megasteel Fitness | The Authority in Bidhannagar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-white overflow-x-hidden">
+<body class="bg-black text-white antialiased overflow-x-hidden selection:bg-orange-600 selection:text-white">
 
-    <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center glass-card border-b-0 m-4 rounded-2xl w-[calc(100%-2rem)]">
-        <div class="flex items-center gap-4">
-            <img src="logo.jpg" alt="Megasteel Fitness" class="w-12 h-12 rounded-full border-2 border-orange-600 p-0.5">
-            <span class="logo-text font-black text-xl tracking-tighter">Megasteel <span class="text-orange-600">Fitness</span></span>
+    <div id="preloader" class="fixed inset-0 z-[100] bg-black flex items-center justify-center transition-transform duration-700">
+        <div class="text-center">
+            <h1 class="font-black text-4xl uppercase tracking-tighter italic animate-pulse">
+                MEGA<span class="text-orange-600">STEEL</span>
+            </h1>
+            <div class="mt-2 h-1 w-32 bg-zinc-800 mx-auto rounded-full overflow-hidden">
+                <div class="h-full bg-orange-600 w-full animate-progress"></div>
+            </div>
         </div>
-        <a href="#join" class="bg-orange-600 hover:bg-orange-700 px-6 py-2 rounded-lg font-bold transition-all shadow-[0_0_20px_rgba(234,88,12,0.4)]">JOIN THE ELITE</a>
+    </div>
+
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden glass-panel p-2 rounded-xl flex gap-2 shadow-2xl animate-slide-up">
+        <a href="https://wa.me/919836951725" class="flex-1 bg-green-500 text-black font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+        <a href="#join" class="flex-1 bg-orange-600 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+            <i class="fas fa-bolt"></i> Free Pass
+        </a>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Megasteel" class="w-10 h-10 rounded-full border border-zinc-700 bg-black p-1">
+                <span class="font-black text-xl uppercase tracking-tighter italic">MEGA<span class="text-orange-600">STEEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 font-bold text-sm tracking-widest uppercase">
+                <a href="#facilities" class="hover:text-orange-600 transition">Facility</a>
+                <a href="#trainers" class="hover:text-orange-600 transition">Coaches</a>
+                <a href="#pricing" class="hover:text-orange-600 transition">Plans</a>
+            </div>
+            <a href="#join" class="hidden md:block bg-white text-black px-6 py-2 font-black uppercase text-sm hover:bg-orange-600 hover:text-white transition transform hover:-translate-y-1">
+                Join The Elite
+            </a>
+        </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 hero-gradient relative">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
-        <h1 class="text-6xl md:text-9xl font-black leading-none mb-6 italic tracking-tighter animate-float">
-            FORGE YOUR <br><span class="text-orange-600">LEGACY.</span>
-        </h1>
-        <p class="max-w-2xl text-zinc-400 text-lg mb-10 uppercase tracking-widest font-semibold">
-            Bidhannagar's leading AC Multi-Gym. MMA • Crossfit • Personalized Diet Plans.
-        </p>
-        <div class="flex gap-4">
-            <a href="#join" class="bg-white text-black px-10 py-5 rounded-sm font-black text-sm uppercase hover:bg-orange-600 hover:text-white transition-all">Claim 7-Day Access</a>
-            <a href="https://wa.me/919836951725" class="border border-zinc-700 px-10 py-5 rounded-sm font-black text-sm uppercase hover:bg-zinc-900 transition-all">WhatsApp Us</a>
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-noise opacity-20 z-10 pointer-events-none"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 scale-110 animate-slow-zoom">
         </div>
-    </section>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+            <div data-aos="fade-down" class="inline-block border border-orange-600/50 bg-orange-600/10 px-4 py-1 rounded-full text-orange-500 font-bold text-xs tracking-[0.2em] mb-6 uppercase backdrop-blur-md">
+                Sector II • Bidhannagar
+            </div>
+            <h1 data-aos="zoom-in" data-aos-delay="200" class="text-6xl md:text-9xl font-black leading-none italic uppercase mb-6 tracking-tighter">
+                FORGE YOUR <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">LEGACY.</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="400" class="text-zinc-400 text-lg md:text-xl uppercase tracking-widest font-medium mb-10 max-w-2xl mx-auto">
+                Stop exercising. Start Training. The most equipped facility in Salt Lake.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#join" class="w-full md:w-auto bg-orange-600 text-white px-10 py-4 font-black text-lg uppercase tracking-wider hover:bg-orange-700 transition">
+                    Start 7-Day Trial
+                </a>
+                <a href="https://wa.me/919836951725" class="w-full md:w-auto border border-zinc-700 bg-black/50 backdrop-blur-md text-white px-10 py-4 font-black text-lg uppercase tracking-wider hover:bg-white hover:text-black transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Chat Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full border-t border-zinc-800 bg-black z-20 py-3 overflow-hidden">
+            <div class="animate-marquee whitespace-nowrap flex gap-10 opacity-70">
+                <span class="text-xl font-black italic text-zinc-600 uppercase">/// 464 Google Reviews /// MMA Training /// Crossfit Zone /// Personal Diet Charts ///</span>
+                <span class="text-xl font-black italic text-zinc-600 uppercase">/// 464 Google Reviews /// MMA Training /// Crossfit Zone /// Personal Diet Charts ///</span>
+            </div>
+        </div>
+    </header>
 
-    <section id="join" class="py-32 px-6 flex flex-col items-center">
-        <div class="max-w-4xl w-full glass-card p-1 rounded-3xl">
-            <div class="bg-zinc-950 rounded-[calc(1.5rem-4px)] p-10">
-                <div class="text-center mb-10">
-                    <h2 class="text-4xl font-black mb-2">Claim Your VIP Pass</h2>
-                    <p class="text-zinc-500 uppercase tracking-widest text-xs">Fill out the form below to start your transformation</p>
+    <section id="facilities" class="py-24 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <h2 class="text-4xl md:text-6xl font-black italic uppercase">World Class <br><span class="text-orange-600">Infrastructure</span></h2>
+                <p class="text-zinc-500 max-w-sm mt-4 md:mt-0">We didn't compromise on equipment, so you don't have to compromise on results.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-1">
+                <div class="group relative h-96 overflow-hidden cursor-pointer" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=2028&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-2xl font-black uppercase italic mb-1">Heavy Iron</h3>
+                        <p class="text-orange-500 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">Olympic Platforms & Plates</p>
+                    </div>
                 </div>
-                <div class="rounded-xl overflow-hidden border border-zinc-800">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsKaZSgZfYm18XshyyUnViSmj3Q2anjHAc0VMK6-_JtiyLXQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class="group relative h-96 overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-2xl font-black uppercase italic mb-1">Combat Zone</h3>
+                        <p class="text-orange-500 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">MMA & Boxing Ring</p>
+                    </div>
+                </div>
+                <div class="group relative h-96 overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1534258936925-c48947387e3b?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h3 class="text-2xl font-black uppercase italic mb-1">Functional</h3>
+                        <p class="text-orange-500 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">Crossfit & HIIT Turf</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-10 bg-orange-600 flex overflow-hidden whitespace-nowrap">
-        <div class="animate-marquee flex gap-20 items-center">
-            <span class="text-2xl font-black italic text-black uppercase">4.7 Google Rating • 464 Reviews • CK Block Sector II • Open 6 AM to 11 PM •</span>
-            <span class="text-2xl font-black italic text-black uppercase">4.7 Google Rating • 464 Reviews • CK Block Sector II • Open 6 AM to 11 PM •</span>
+    <section id="pricing" class="py-24 px-6 relative bg-zinc-950">
+        <div class="absolute inset-0 bg-noise opacity-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-black italic uppercase mb-12">Invest In Yourself</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-zinc-800 bg-black p-8 hover:border-zinc-600 transition duration-300" data-aos="flip-left">
+                    <h3 class="text-zinc-500 font-bold tracking-widest text-sm uppercase mb-4">Starter</h3>
+                    <div class="text-4xl font-black mb-6">₹1,499<span class="text-lg text-zinc-600 font-medium">/mo</span></div>
+                    <ul class="space-y-4 text-zinc-400 text-sm mb-8">
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Batch Slot Access</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Basic Orientation</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Locker Access</li>
+                    </ul>
+                    <a href="#join" class="block w-full py-4 border border-white text-center font-bold uppercase hover:bg-white hover:text-black transition">Select Plan</a>
+                </div>
+                <div class="border-2 border-orange-600 bg-zinc-900 p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(234,88,12,0.2)]" data-aos="flip-left" data-aos-delay="100">
+                    <div class="bg-orange-600 text-black font-bold text-xs uppercase tracking-widest inline-block px-2 py-1 mb-4">Most Popular</div>
+                    <h3 class="text-white font-bold tracking-widest text-sm uppercase mb-4">Pro Athlete</h3>
+                    <div class="text-5xl font-black mb-6 text-orange-500">₹2,999<span class="text-lg text-zinc-500 font-medium">/mo</span></div>
+                    <ul class="space-y-4 text-zinc-300 text-sm mb-8">
+                        <li class="flex gap-3"><i class="fas fa-star text-orange-500"></i> <strong>Unlimited Access</strong></li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Personalized Diet Chart</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Monthly Progress Check</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> AC Floor Access</li>
+                    </ul>
+                    <a href="#join" class="block w-full py-4 bg-orange-600 text-white text-center font-black uppercase hover:bg-orange-700 transition">Select Plan</a>
+                </div>
+                <div class="border border-zinc-800 bg-black p-8 hover:border-zinc-600 transition duration-300" data-aos="flip-left" data-aos-delay="200">
+                    <h3 class="text-zinc-500 font-bold tracking-widest text-sm uppercase mb-4">Elite</h3>
+                    <div class="text-4xl font-black mb-6">₹5,999<span class="text-lg text-zinc-600 font-medium">/mo</span></div>
+                    <ul class="space-y-4 text-zinc-400 text-sm mb-8">
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> 1:1 Personal Training</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> MMA Combat Access</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-orange-600"></i> Advanced Mobility Work</li>
+                    </ul>
+                    <a href="#join" class="block w-full py-4 border border-white text-center font-bold uppercase hover:bg-white hover:text-black transition">Select Plan</a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section id="join" class="py-24 bg-orange-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-black border-4 border-white p-2 md:p-10 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase italic mb-2">Claim VIP Access</h2>
+                    <p class="text-zinc-400 uppercase tracking-widest text-sm">Limited slots for Sector II Residents</p>
+                </div>
+                
+                <div class="bg-white h-[800px] w-full overflow-hidden">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsKaZSgZfYm18XshyyUnViSmj3Q2anjHAc0VMK6-_JtiyLXQ/viewform?embedded=true" width="100%" height="100%" frameborder="0">Loading…</iframe>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-zinc-500 text-xs uppercase tracking-widest"><i class="fas fa-lock"></i> Your data is secure & sent directly to Megasteel Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black pt-20 pb-10 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <h2 class="text-3xl font-black uppercase italic mb-6">MEGA<span class="text-orange-600">STEEL</span></h2>
+                <p class="text-zinc-500 max-w-sm mb-6">The premier fitness destination in Bidhannagar. We build bodies, discipline, and community.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-widest mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-zinc-500 text-sm">
+                    <li><a href="#facilities" class="hover:text-white">Our Facility</a></li>
+                    <li><a href="#trainers" class="hover:text-white">Expert Coaches</a></li>
+                    <li><a href="#pricing" class="hover:text-white">Memberships</a></li>
+                    <li><a href="#" class="hover:text-white">Member Login</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-widest mb-6">Visit Us</h4>
+                <p class="text-zinc-500 text-sm mb-4">CK 57, 2nd Floor,<br>Sector II, Bidhannagar,<br>Kolkata 700091</p>
+                <p class="text-zinc-500 text-sm">Mon-Sat: 6am - 11pm<br>Sun: 8am - 8pm</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-700 text-xs uppercase tracking-widest">© 2025 Megasteel Fitness. All Rights Reserved.</p>
+            <p class="text-zinc-800 text-xs uppercase tracking-widest">Designed by 0bl1vyx Agency</p>
+        </div>
+    </footer>
+
+    <div id="exit-modal" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-zinc-900 border-2 border-orange-600 max-w-lg w-full p-8 text-center relative shadow-[0_0_50px_rgba(234,88,12,0.3)]">
+            <button id="close-modal" class="absolute top-4 right-4 text-zinc-500 hover:text-white"><i class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black italic uppercase mb-2">Wait! Don't Miss Out.</h3>
+            <p class="text-zinc-400 mb-6">Residents of Bidhannagar get <strong>50% OFF</strong> the enrollment fee if you sign up today.</p>
+            <a href="#join" class="block w-full bg-orange-600 text-white py-4 font-black uppercase hover:bg-orange-700 transition" onclick="document.getElementById('exit-modal').classList.add('hidden')">Claim Offer Now</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
